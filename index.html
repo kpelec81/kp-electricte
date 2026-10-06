@@ -1,17 +1,18 @@
+HTML
 <!DOCTYPE html>
 <html lang="fr" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Killian Portal Électricité & Climatisation | Artisan Électricien KPE</title>
-  <meta name="description" content="KPE Électricité Générale : rénovation électrique aux normes NF C 15-100, pose et entretien de climatisation réversible, installation de bornes de recharge pour véhicules électriques. Devis gratuit et garantie décennale.">
+  <title>Killian Portal Électricité | KPE - Artisan Électricien & Climatisation</title>
+  <meta name="description" content="Killian Portal Électricité (KPE) : travaux d'électricité générale, rénovation aux normes NF C 15-100, climatisation réversible et bornes de recharge pour véhicules électriques. Devis gratuit et garantie décennale.">
 
-  <!-- Google Fonts : Plus Jakarta Sans -->
+  <!-- Polices Google : Plus Jakarta Sans & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <!-- Tailwind CSS via CDN -->
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -19,14 +20,16 @@
         extend: {
           fontFamily: {
             sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            body: ['"Inter"', 'sans-serif'],
           },
           colors: {
-            brand: {
-              gold: '#D4AF37',
-              goldLight: '#F59E0B',
-              navy: '#0B132B',
-              darkBg: '#070C18',
-              cardBg: '#0F172A',
+            kpe: {
+              navy: '#0f223d',       /* Bleu marine officiel KPE */
+              navyLight: '#1e3a5f',
+              gold: '#c59b27',       /* Or brossé officiel KPE */
+              goldLight: '#dfb138',
+              goldSoft: '#fbf7ee',
+              grayBg: '#f8fafc',
             }
           }
         }
@@ -34,404 +37,516 @@
     }
   </script>
 
-  <!-- Font Awesome pour les icônes -->
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <!-- Widget Calendly -->
+  <!-- Calendly -->
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
   <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
-
-  <style>
-    /* Trame technique d'arrière-plan */
-    .tech-grid {
-      background-image: radial-gradient(rgba(212, 175, 55, 0.08) 1px, transparent 1px),
-                        radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-      background-size: 36px 36px;
-      background-position: 0 0, 18px 18px;
-    }
-
-    /* Halos lumineux en dégradé */
-    .glow-gold {
-      background: radial-gradient(circle, rgba(212, 175, 55, 0.12) 0%, rgba(7, 12, 24, 0) 70%);
-    }
-
-    .glow-cyan {
-      background: radial-gradient(circle, rgba(56, 189, 248, 0.08) 0%, rgba(7, 12, 24, 0) 70%);
-    }
-  </style>
 </head>
 
-<body class="bg-brand-darkBg text-slate-200 font-sans antialiased selection:bg-amber-400 selection:text-slate-950">
+<body class="bg-white text-slate-800 font-body antialiased selection:bg-kpe-gold selection:text-white">
 
-  <!-- Bandeau supérieur de garanties -->
-  <div class="bg-gradient-to-r from-amber-600/20 via-amber-500/10 to-transparent border-b border-amber-500/20 text-xs py-2 px-4 text-center text-amber-300 font-medium">
-    <div class="max-w-6xl mx-auto flex items-center justify-center gap-2 sm:gap-6 flex-wrap">
-      <span><i class="fa-solid fa-shield-halved mr-1 text-amber-400"></i> Garantie Décennale & Responsabilité Civile</span>
-      <span class="hidden sm:inline opacity-40">•</span>
-      <span><i class="fa-solid fa-certificate mr-1 text-amber-400"></i> Norme NF C 15-100</span>
-      <span class="hidden sm:inline opacity-40">•</span>
-      <span class="text-white font-semibold"><i class="fa-solid fa-file-invoice mr-1 text-amber-400"></i> Devis Gratuit & Diagnostic</span>
+  <!-- 1. Bandeau supérieur : Réassurance & Confiance -->
+  <div class="bg-kpe-navy text-slate-200 text-xs py-2 px-4 border-b border-kpe-gold/30">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-4 text-[11px] sm:text-xs">
+        <span class="flex items-center gap-1.5"><i class="fa-solid fa-shield-halved text-kpe-gold"></i> <strong>Garantie Décennale</strong> & Responsabilité Civile</span>
+        <span class="hidden md:inline text-slate-500">|</span>
+        <span class="hidden md:flex items-center gap-1.5"><i class="fa-solid fa-certificate text-kpe-gold"></i> Conformité Norme <strong>NF C 15-100</strong></span>
+        <span class="hidden lg:inline text-slate-500">|</span>
+        <span class="hidden lg:flex items-center gap-1.5"><i class="fa-solid fa-location-dot text-kpe-gold"></i> Albi et agglomération (rayon 25 km)</span>
+      </div>
+      <div class="flex items-center gap-4 text-[11px] sm:text-xs">
+        <span class="text-kpe-gold font-semibold"><i class="fa-regular fa-clock mr-1"></i> Réponse devis sous 24/48h</span>
+      </div>
     </div>
   </div>
 
-  <!-- Barre de navigation -->
-  <header class="sticky top-0 z-50 bg-brand-darkBg/90 backdrop-blur-md border-b border-slate-800/80 transition duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex items-center justify-between">
+  <!-- 2. Header & Barre de navigation -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm transition">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
       
-      <!-- Logo KPE -->
+      <!-- Logo Officiel IMG_4355.PNG -->
       <a href="#" class="flex items-center gap-3.5 group">
-        <div class="relative">
-          <img src="logo_kpe_complet_transparent.png" alt="Killian Portal Électricité - KPE" class="h-11 w-11 sm:h-12 sm:w-12 object-contain rounded-full transition-transform duration-300 group-hover:scale-105">
-        </div>
+        <img src="IMG_4355.PNG" alt="Killian Portal Électricité - KPE" class="h-12 w-12 sm:h-14 sm:w-14 object-contain transition-transform group-hover:scale-105 drop-shadow-sm">
         <div class="flex flex-col">
-          <span class="text-lg font-extrabold tracking-wider text-white leading-none group-hover:text-amber-400 transition">KPE</span>
-          <span class="text-[10px] sm:text-[11px] text-amber-400/90 font-semibold tracking-wider uppercase mt-1">Killian Portal Électricité</span>
+          <span class="font-sans font-extrabold text-base sm:text-lg text-kpe-navy tracking-tight leading-none group-hover:text-kpe-gold transition">
+            Killian Portal
+          </span>
+          <span class="text-[11px] sm:text-xs font-semibold text-kpe-gold uppercase tracking-wider mt-1">
+            Électricité Générale & Climatisation
+          </span>
         </div>
       </a>
 
-      <!-- Menu de navigation desktop -->
-      <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-slate-300">
-        <a href="#electricite" class="hover:text-amber-400 transition-colors">Électricité Générale</a>
-        <a href="#climatisation" class="hover:text-amber-400 transition-colors">Climatisation</a>
-        <a href="#bornes" class="hover:text-amber-400 transition-colors">Bornes VE</a>
-        <a href="#contact" class="hover:text-amber-400 transition-colors">Contact & Devis</a>
+      <!-- Menu Desktop -->
+      <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-slate-700">
+        <a href="#electricite" class="hover:text-kpe-navy transition">Électricité</a>
+        <a href="#climatisation" class="hover:text-kpe-navy transition">Climatisation</a>
+        <a href="#bornes" class="hover:text-kpe-navy transition">Bornes VE</a>
+        <a href="#engagements" class="hover:text-kpe-navy transition">Engagements</a>
+        <a href="#contact" class="hover:text-kpe-navy transition">Demande de devis</a>
       </nav>
 
       <!-- Bouton d'appel direct -->
-      <div class="flex items-center gap-3">
-        <a href="tel:0677772213" class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-bold text-xs sm:text-sm px-4 py-2.5 rounded-lg shadow-lg shadow-amber-500/10 transition-all transform hover:-translate-y-0.5 active:translate-y-0">
-          <i class="fa-solid fa-phone"></i>
-          <span class="tracking-wide">06 77 77 22 13</span>
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="tel:0677772213" class="flex items-center gap-2.5 bg-gradient-to-r from-kpe-navy to-kpe-navyLight text-white px-4 py-2.5 rounded-xl shadow hover:shadow-md hover:from-kpe-gold hover:to-kpe-goldLight transition transform hover:-translate-y-0.5 font-sans font-bold text-xs sm:text-sm">
+          <i class="fa-solid fa-phone text-kpe-gold"></i>
+          <span>06 77 77 22 13</span>
         </a>
       </div>
+
+      <!-- Hamburger Mobile -->
+      <button id="mobileMenuBtn" aria-label="Menu" class="lg:hidden text-kpe-navy p-2 rounded-lg hover:bg-slate-100 transition">
+        <i class="fa-solid fa-bars text-xl"></i>
+      </button>
+
+    </div>
+
+    <!-- Menu Déroulant Mobile -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-4 space-y-3 font-medium text-sm text-slate-700">
+      <a href="#electricite" class="block py-1.5 border-b border-slate-100 hover:text-kpe-navy">Électricité Générale</a>
+      <a href="#climatisation" class="block py-1.5 border-b border-slate-100 hover:text-kpe-navy">Climatisation Réversible</a>
+      <a href="#bornes" class="block py-1.5 border-b border-slate-100 hover:text-kpe-navy">Bornes de Recharge VE</a>
+      <a href="#engagements" class="block py-1.5 border-b border-slate-100 hover:text-kpe-navy">Nos Garanties & Normes</a>
+      <a href="#contact" class="block py-1.5 font-bold text-kpe-gold">Demander un Devis Gratuit</a>
+      <a href="tel:0677772213" class="flex items-center justify-center gap-2 bg-kpe-navy text-white py-2.5 rounded-lg font-bold text-sm mt-3">
+        <i class="fa-solid fa-phone text-kpe-gold"></i> 06 77 77 22 13
+      </a>
     </div>
   </header>
 
-  <!-- Section Héros -->
-  <section class="relative pt-12 pb-20 sm:pt-20 sm:pb-28 tech-grid overflow-hidden border-b border-slate-800">
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] glow-gold pointer-events-none rounded-full blur-3xl"></div>
-
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center relative z-10">
+  <!-- 3. Section Héros : Claire et Haut de Gamme -->
+  <section class="relative bg-gradient-to-b from-slate-50 via-white to-slate-50 pt-12 pb-20 border-b border-slate-200 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <!-- Macaron central du logo KPE -->
-      <div class="inline-block relative mb-8 group">
-        <div class="absolute -inset-1 rounded-full bg-gradient-to-r from-amber-500/40 via-amber-300/30 to-amber-600/40 blur-lg opacity-75 group-hover:opacity-100 transition duration-500"></div>
-        <img src="logo_kpe_complet_transparent.png" alt="Killian Portal Électricité Logo" class="relative h-32 w-32 sm:h-44 sm:w-44 mx-auto object-contain drop-shadow-2xl">
-      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Colonne Gauche -->
+        <div class="lg:col-span-7 text-center lg:text-left">
+          
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-kpe-gold/10 border border-kpe-gold/30 text-kpe-navy text-xs font-bold uppercase tracking-wider mb-5">
+            <i class="fa-solid fa-award text-kpe-gold"></i>
+            <span>Artisan de confiance &bull; Albi & Agglomération</span>
+          </div>
 
-      <!-- Surtitre -->
-      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-widest mb-6">
-        <i class="fa-solid fa-bolt-lightning text-amber-400"></i>
-        <span>Artisan Électricien &bull; Neuf & Rénovation</span>
-      </div>
+          <h1 class="font-sans font-black text-3xl sm:text-5xl lg:text-6xl text-kpe-navy leading-[1.1] mb-5">
+            L'exigence technique au service de votre habitat.
+          </h1>
 
-      <!-- Titre principal -->
-      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight uppercase leading-tight mb-6">
-        Électricité <span class="text-amber-400">⚡</span> Climatisation
-        <span class="block text-xl sm:text-3xl font-bold text-slate-300 tracking-normal normal-case mt-2">
-          Installation, mise en conformité & confort thermique
-        </span>
-      </h1>
+          <p class="text-slate-600 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0 mb-8 font-normal">
+            Entreprise artisanale spécialisée en <strong class="text-slate-900 font-semibold">rénovation électrique NF C 15-100</strong>, pose & entretien de <strong class="text-slate-900 font-semibold">climatisation réversible</strong> et solutions de recharge pour <strong class="text-slate-900 font-semibold">véhicules électriques</strong>.
+          </p>
 
-      <p class="max-w-2xl mx-auto text-slate-300 text-sm sm:text-base lg:text-lg leading-relaxed mb-10">
-        Rénovation électrique complète selon la norme <strong class="text-white font-semibold">NF C 15-100</strong>, pose et entretien de <strong class="text-white font-semibold">climatisation réversible</strong>, et installation de <strong class="text-white font-semibold">bornes de recharge VE</strong>.
-      </p>
-
-      <!-- Cartouche Contact Téléphone & Actions -->
-      <div class="max-w-xl mx-auto bg-slate-900/90 border border-slate-700/80 rounded-2xl p-6 sm:p-8 shadow-2xl backdrop-blur-sm">
-        <div class="flex flex-col items-center">
-          <span class="text-[11px] font-bold uppercase tracking-[0.2em] text-slate-400 mb-1">Intervention & Conseils</span>
-          <a href="tel:0677772213" class="text-3xl sm:text-4xl font-extrabold text-white tracking-wider hover:text-amber-400 transition flex items-center gap-3 my-1">
-            <i class="fa-solid fa-phone text-amber-400 text-2xl sm:text-3xl"></i>
-            06 77 77 22 13
-          </a>
-          <p class="text-xs text-slate-400 mt-1 font-medium">Ligne directe &bull; Estimation et devis gratuit</p>
-
-          <div class="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3.5 w-full">
-            <a href="#contact" class="w-full sm:w-1/2 inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-sm px-6 py-3 rounded-xl transition shadow-lg shadow-amber-500/20">
+          <!-- Boutons d'action -->
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+            <a href="#contact" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-kpe-navy to-kpe-navyLight hover:from-kpe-gold hover:to-kpe-goldLight text-white font-sans font-bold text-sm px-7 py-3.5 rounded-xl shadow-lg transition transform hover:-translate-y-0.5">
               <i class="fa-solid fa-file-signature"></i>
-              Demande de devis
+              <span>Demander un devis gratuit</span>
             </a>
-            <a href="#climatisation-rdv" class="w-full sm:w-1/2 inline-flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-700 text-white font-semibold text-sm px-6 py-3 rounded-xl border border-slate-700 transition">
-              <i class="fa-solid fa-calendar-check text-sky-400"></i>
-              RDV Révision Clim
+            <a href="tel:0677772213" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-white border-2 border-kpe-navy text-kpe-navy hover:bg-slate-50 font-sans font-bold text-sm px-6 py-3.5 rounded-xl shadow-sm transition">
+              <i class="fa-solid fa-phone text-kpe-gold"></i>
+              <span>06 77 77 22 13</span>
             </a>
           </div>
+
+          <!-- Chiffres clés de réassurance -->
+          <div class="mt-8 pt-8 border-t border-slate-200 grid grid-cols-3 gap-4 text-center lg:text-left">
+            <div>
+              <p class="font-sans font-extrabold text-lg sm:text-2xl text-kpe-navy">100 %</p>
+              <p class="text-xs text-slate-500 font-medium">Norme NF C 15-100</p>
+            </div>
+            <div>
+              <p class="font-sans font-extrabold text-lg sm:text-2xl text-kpe-gold">10 ans</p>
+              <p class="text-xs text-slate-500 font-medium">Garantie Décennale</p>
+            </div>
+            <div>
+              <p class="font-sans font-extrabold text-lg sm:text-2xl text-kpe-navy">48 h</p>
+              <p class="text-xs text-slate-500 font-medium">Délai devis rapide</p>
+            </div>
+          </div>
+
         </div>
+
+        <!-- Colonne Droite : Le Macaron Officiel IMG_4355.PNG -->
+        <div class="lg:col-span-5 flex flex-col items-center justify-center">
+          <div class="relative w-64 h-64 sm:w-80 sm:h-80 flex items-center justify-center">
+            <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-kpe-gold/20 via-kpe-navy/5 to-transparent blur-xl"></div>
+            <div class="relative bg-white p-3 rounded-full shadow-2xl border-4 border-slate-100">
+              <img src="IMG_4355.PNG" alt="Logo Killian Portal Électricité KPE" class="w-56 h-56 sm:w-72 sm:h-72 object-contain rounded-full">
+            </div>
+          </div>
+          <span class="mt-4 text-xs font-semibold uppercase tracking-widest text-slate-500 text-center">
+            Killian Portal &bull; Entreprise Individuelle
+          </span>
+        </div>
+
       </div>
 
     </div>
   </section>
 
-  <!-- Les 3 Domaines d'Activité -->
+  <!-- 4. Les 3 Domaines d'Activité -->
   <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 space-y-24">
 
-    <!-- 1. Électricité Générale -->
+    <!-- PÔLE 1 : ÉLECTRICITÉ GÉNÉRALE & RÉNOVATION -->
     <section id="electricite" class="scroll-mt-24">
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 pb-6 border-b border-slate-800 gap-4">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 pb-6 border-b border-slate-200 gap-4">
         <div>
-          <div class="inline-flex items-center gap-2 text-amber-400 text-xs font-bold uppercase tracking-wider mb-2">
-            <i class="fa-solid fa-plug-circle-bolt"></i>
-            Expertise Résidentielle & Tertiaire
-          </div>
-          <h2 class="text-2xl sm:text-4xl font-black text-white">Électricité Générale & Rénovation</h2>
+          <span class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-kpe-gold mb-2">
+            <i class="fa-solid fa-bolt"></i> Travaux Électriques Résidentiels & Tertiaires
+          </span>
+          <h2 class="font-sans font-extrabold text-2xl sm:text-4xl text-kpe-navy">
+            Électricité Générale & Rénovation
+          </h2>
         </div>
-        <p class="text-slate-400 text-sm max-w-md">
-          Conception, sécurisation et remise à neuf complète de votre installation selon les normes de sécurité en vigueur.
+        <p class="text-slate-600 text-sm max-w-md">
+          Sécurisation, modernisation et remplacement complet de vos installations dans le respect strict des normes de sécurité.
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <!-- Carte 1 -->
-        <div class="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-6 hover:border-amber-500/50 hover:bg-slate-900/90 transition-all duration-300 group">
-          <div class="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-400 text-xl mb-5 group-hover:scale-110 transition-transform">
-            <i class="fa-solid fa-arrows-spin"></i>
+        
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md hover:border-kpe-gold transition group">
+          <div class="w-12 h-12 rounded-xl bg-kpe-gold/10 text-kpe-gold flex items-center justify-center text-xl mb-4 group-hover:bg-kpe-navy group-hover:text-white transition">
+            <i class="fa-solid fa-arrows-rotate"></i>
           </div>
-          <h3 class="text-lg font-bold text-white mb-2">Rénovation Complète</h3>
-          <p class="text-slate-400 text-xs leading-relaxed">
-            Reprise intégrale du câblage, saignées soignées dans les murs ou pose en goulottes, passage de gaines ICTA et appareillage moderne.
+          <h3 class="font-sans font-bold text-lg text-kpe-navy mb-2">Rénovation Complète</h3>
+          <p class="text-slate-600 text-xs leading-relaxed">
+            Reprise intégrale des réseaux : passage en gaines sous saignées ou sous goulottes décoratives, réfection des circuits de prises et éclairages.
           </p>
         </div>
 
-        <!-- Carte 2 -->
-        <div class="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-6 hover:border-amber-500/50 hover:bg-slate-900/90 transition-all duration-300 group">
-          <div class="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-400 text-xl mb-5 group-hover:scale-110 transition-transform">
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md hover:border-kpe-gold transition group">
+          <div class="w-12 h-12 rounded-xl bg-kpe-gold/10 text-kpe-gold flex items-center justify-center text-xl mb-4 group-hover:bg-kpe-navy group-hover:text-white transition">
             <i class="fa-solid fa-table-cells"></i>
           </div>
-          <h3 class="text-lg font-bold text-white mb-2">Tableau Électrique</h3>
-          <p class="text-slate-400 text-xs leading-relaxed">
-            Remplacement de compteurs fusibles vétustes. Installation de disjoncteurs divisionnaires, interrupteurs différentiels 30mA et mise à la terre mesurée.
+          <h3 class="font-sans font-bold text-lg text-kpe-navy mb-2">Tableaux Électriques</h3>
+          <p class="text-slate-600 text-xs leading-relaxed">
+            Remplacement de tableaux vétustes ou à fusibles par des modules Hager ou Legrand avec disjoncteurs différentiels 30mA et mise à la terre mesurée.
           </p>
         </div>
 
-        <!-- Carte 3 -->
-        <div class="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-6 hover:border-amber-500/50 hover:bg-slate-900/90 transition-all duration-300 group">
-          <div class="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-400 text-xl mb-5 group-hover:scale-110 transition-transform">
-            <i class="fa-solid fa-certificate"></i>
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md hover:border-kpe-gold transition group">
+          <div class="w-12 h-12 rounded-xl bg-kpe-gold/10 text-kpe-gold flex items-center justify-center text-xl mb-4 group-hover:bg-kpe-navy group-hover:text-white transition">
+            <i class="fa-solid fa-shield-halved"></i>
           </div>
-          <h3 class="text-lg font-bold text-white mb-2">Norme NF C 15-100</h3>
-          <p class="text-slate-400 text-xs leading-relaxed">
-            Diagnostic technique et mise en conformité réglementaire indispensable pour sécuriser les occupants et valider vos démarches immobilières.
+          <h3 class="font-sans font-bold text-lg text-kpe-navy mb-2">Norme NF C 15-100</h3>
+          <p class="text-slate-600 text-xs leading-relaxed">
+            Audit de conformité pour vente, achat ou mise en location. Suppression des points de chauffe et sécurisation de toutes les pièces d'eau.
           </p>
         </div>
 
-        <!-- Carte 4 -->
-        <div class="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-6 hover:border-amber-500/50 hover:bg-slate-900/90 transition-all duration-300 group">
-          <div class="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-400 text-xl mb-5 group-hover:scale-110 transition-transform">
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md hover:border-kpe-gold transition group">
+          <div class="w-12 h-12 rounded-xl bg-kpe-gold/10 text-kpe-gold flex items-center justify-center text-xl mb-4 group-hover:bg-kpe-navy group-hover:text-white transition">
             <i class="fa-solid fa-screwdriver-wrench"></i>
           </div>
-          <h3 class="text-lg font-bold text-white mb-2">Dépannage & Recherche de panne</h3>
-          <p class="text-slate-400 text-xs leading-relaxed">
-            Localisation précise de défauts d'isolement, dysfonctionnements de disjoncteurs, pannes d'éclairage ou ajout de prises spécialisées.
+          <h3 class="font-sans font-bold text-lg text-kpe-navy mb-2">Dépannage & Diagnostic</h3>
+          <p class="text-slate-600 text-xs leading-relaxed">
+            Recherche de pannes, court-circuits, disjonctions intempestives et remplacement d'appareillage défaillant dans les meilleurs délais.
           </p>
         </div>
+
       </div>
+
+      <div class="mt-8 bg-slate-50 border border-slate-200 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <i class="fa-solid fa-circle-check text-kpe-gold text-2xl"></i>
+          <p class="text-xs sm:text-sm text-slate-700">
+            <strong>Matériel professionnel certifié :</strong> pose exclusive de composants aux normes NF des marques reconnues (Hager, Schneider, Legrand).
+          </p>
+        </div>
+        <a href="#contact" class="text-xs font-bold uppercase tracking-wider text-kpe-navy hover:text-kpe-gold flex items-center gap-1 transition">
+          Estimer mes travaux électriques <i class="fa-solid fa-arrow-right text-xs"></i>
+        </a>
+      </div>
+
     </section>
 
-    <!-- 2. Climatisation Réversible -->
+    <!-- PÔLE 2 : CLIMATISATION RÉVERSIBLE & POMPE À CHALEUR -->
     <section id="climatisation" class="scroll-mt-24">
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 pb-6 border-b border-slate-800 gap-4">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 pb-6 border-b border-slate-200 gap-4">
         <div>
-          <div class="inline-flex items-center gap-2 text-sky-400 text-xs font-bold uppercase tracking-wider mb-2">
-            <i class="fa-solid fa-snowflake"></i>
-            Confort Thermique & Économies d'Énergie
-          </div>
-          <h2 class="text-2xl sm:text-4xl font-black text-white">Climatisation Réversible & Pompes à Chaleur</h2>
+          <span class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-sky-600 mb-2">
+            <i class="fa-solid fa-snowflake"></i> Chauffage Économique & Rafraîchissement
+          </span>
+          <h2 class="font-sans font-extrabold text-2xl sm:text-4xl text-kpe-navy">
+            Climatisation Réversible (PAC Air/Air)
+          </h2>
         </div>
-        <p class="text-slate-400 text-sm max-w-md">
-          Chaleur douce en hiver et fraîcheur en été grâce à des équipements réversibles performants à haute efficacité énergétique.
+        <p class="text-slate-600 text-sm max-w-md">
+          Un confort optimal 4 saisons : divisez vos factures de chauffage l'hiver et profitez d'un intérieur frais durant l'été.
         </p>
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         
-        <!-- Descriptif technique climatisation -->
         <div class="lg:col-span-7 space-y-6">
-          <div class="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-6 sm:p-8">
-            <h3 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
-              <i class="fa-solid fa-wind text-sky-400"></i>
-              Pose Neuf & Remplacement (Monosplit & Multisplit)
+          
+          <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm">
+            <h3 class="font-sans font-bold text-xl text-kpe-navy mb-3 flex items-center gap-2.5">
+              <i class="fa-solid fa-wind text-sky-600"></i>
+              Installation & Pose Monosplit / Multisplit
             </h3>
-            <p class="text-slate-300 text-sm leading-relaxed mb-4">
-              Chaque logement possède ses spécificités thermiques. Nous réalisons une étude de volume et un dimensionnement précis pour garantir un rendement optimal sans surconsommation électrique.
+            <p class="text-slate-600 text-sm leading-relaxed mb-4">
+              Chaque logement nécessite une étude thermique préalable afin d'ajuster la puissance en kW sans surconsommation. Pose soignée des liaisons frigorifiques, évacuation propre des condensats et intégration discrète.
             </p>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-slate-300">
-              <div class="flex items-center gap-2 bg-slate-800/50 p-2.5 rounded-lg border border-slate-700/60">
-                <i class="fa-solid fa-check text-sky-400"></i> Liaisons frigorifiques soignées
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-slate-700">
+              <div class="flex items-center gap-2 bg-slate-50 p-2.5 rounded-lg border border-slate-100">
+                <i class="fa-solid fa-check text-sky-600"></i> Bilan thermique personnalisé
               </div>
-              <div class="flex items-center gap-2 bg-slate-800/50 p-2.5 rounded-lg border border-slate-700/60">
-                <i class="fa-solid fa-check text-sky-400"></i> Tirage au vide & mise en service
+              <div class="flex items-center gap-2 bg-slate-50 p-2.5 rounded-lg border border-slate-100">
+                <i class="fa-solid fa-check text-sky-600"></i> Tirage au vide & mise en service F-Gaz
               </div>
-              <div class="flex items-center gap-2 bg-slate-800/50 p-2.5 rounded-lg border border-slate-700/60">
-                <i class="fa-solid fa-check text-sky-400"></i> Protection électrique dédiée
+              <div class="flex items-center gap-2 bg-slate-50 p-2.5 rounded-lg border border-slate-100">
+                <i class="fa-solid fa-check text-sky-600"></i> Ligne électrique protégée dédiée
               </div>
-              <div class="flex items-center gap-2 bg-slate-800/50 p-2.5 rounded-lg border border-slate-700/60">
-                <i class="fa-solid fa-check text-sky-400"></i> Manipulation certifiée des fluides
+              <div class="flex items-center gap-2 bg-slate-50 p-2.5 rounded-lg border border-slate-100">
+                <i class="fa-solid fa-check text-sky-600"></i> Équipements silencieux haute performance
               </div>
             </div>
           </div>
 
-          <div class="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-6 sm:p-8">
-            <h3 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
-              <i class="fa-solid fa-shield-virus text-sky-400"></i>
+          <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm">
+            <h3 class="font-sans font-bold text-xl text-kpe-navy mb-3 flex items-center gap-2.5">
+              <i class="fa-solid fa-hand-holding-medical text-sky-600"></i>
               Entretien Périodique & Révision Annuelle
             </h3>
-            <p class="text-slate-300 text-sm leading-relaxed mb-4">
-              L'entretien régulier est essentiel pour préserver la qualité de l'air ambiant, prolonger la durée de vie du compresseur et préserver votre garantie constructeur.
+            <p class="text-slate-600 text-sm leading-relaxed mb-4">
+              L'entretien régulier est capital : il garantit la qualité de l'air respiré, évite les pannes en période de canicule ou de grand froid et préserve la garantie constructeur de vos compresseurs.
             </p>
-            <ul class="space-y-2.5 text-xs text-slate-300">
-              <li class="flex items-start gap-2.5">
-                <i class="fa-solid fa-circle-check text-sky-400 mt-0.5"></i>
-                <span>Nettoyage approfondi et traitement bactéricide/fongicide des filtres et unités intérieures.</span>
+            <ul class="text-xs text-slate-600 space-y-2">
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-circle-check text-sky-600"></i> Nettoyage et traitement antibactérien des filtres et de la turbine de soufflage.
               </li>
-              <li class="flex items-start gap-2.5">
-                <i class="fa-solid fa-circle-check text-sky-400 mt-0.5"></i>
-                <span>Contrôle de l'écoulement des condensats pour éviter tout débordement ou mauvaise odeur.</span>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-circle-check text-sky-600"></i> Vérification des pressions, contrôle d'étanchéité et mesure des températures.
               </li>
-              <li class="flex items-start gap-2.5">
-                <i class="fa-solid fa-circle-check text-sky-400 mt-0.5"></i>
-                <span>Test d'étanchéité du circuit frigorigène et mesure des pressions de fonctionnement.</span>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-circle-check text-sky-600"></i> Désobstruction et désinfection complète du bac à condensats.
               </li>
             </ul>
           </div>
+
         </div>
 
-        <!-- Prise de RDV Calendly -->
-        <div id="climatisation-rdv" class="lg:col-span-5 bg-gradient-to-b from-sky-950/40 via-slate-900 to-slate-900 border border-sky-500/30 rounded-2xl p-6 sm:p-8 shadow-xl">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-400/20 text-sky-400 text-[11px] font-bold uppercase tracking-wider mb-4">
-            <i class="fa-solid fa-calendar-day"></i> Réservation Directe
-          </div>
-          <h3 class="text-2xl font-bold text-white mb-2">Entretien Climatisation</h3>
-          <p class="text-slate-400 text-xs leading-relaxed mb-6">
-            Sélectionnez directement votre créneau disponible dans le planning pour l'intervention d'un artisan à domicile.
-          </p>
+        <!-- Bloc Réservation RDV Direct -->
+        <div id="climatisation-rdv" class="lg:col-span-5 bg-gradient-to-br from-sky-50 via-white to-slate-50 border-2 border-sky-200 rounded-3xl p-6 sm:p-8 shadow-md">
+          
+          <div class="text-center">
+            <span class="inline-block bg-sky-600 text-white text-[11px] font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-3">
+              Service Rapide
+            </span>
+            <h3 class="font-sans font-bold text-2xl text-kpe-navy mb-2">
+              Réserver votre Entretien Clim
+            </h3>
+            <p class="text-slate-600 text-xs sm:text-sm mb-6 leading-relaxed">
+              Consultez nos disponibilités en direct et fixez la date de passage de votre artisan en quelques clics.
+            </p>
 
-          <div class="bg-slate-950/80 border border-slate-800 rounded-xl p-6 text-center shadow-inner">
-            <div class="w-14 h-14 bg-sky-500/10 text-sky-400 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
-              <i class="fa-solid fa-calendar-check"></i>
+            <div class="bg-white p-6 rounded-2xl border border-sky-100 shadow-sm mb-6">
+              <div class="w-14 h-14 bg-sky-100 text-sky-600 rounded-full flex items-center justify-center mx-auto mb-3 text-2xl">
+                <i class="fa-regular fa-calendar-check"></i>
+              </div>
+              <p class="font-sans font-bold text-sm text-slate-800">Prise de RDV instantanée</p>
+              <p class="text-xs text-slate-500 mt-1">Aucun paiement en ligne requis &bull; Confirmation par e-mail</p>
+              
+              <button onclick="Calendly.initPopupWidget({url: 'https://calendly.com'});return false;" class="mt-5 w-full inline-flex items-center justify-center gap-2 bg-sky-600 hover:bg-sky-700 text-white font-sans font-bold text-sm px-6 py-3.5 rounded-xl shadow transition transform hover:-translate-y-0.5">
+                <i class="fa-solid fa-calendar-days"></i>
+                Choisir un créneau disponible
+              </button>
             </div>
-            <h4 class="text-white font-semibold text-sm mb-1">Prendre RDV en ligne</h4>
-            <p class="text-slate-400 text-xs mb-5">Sans paiement immédiat &bull; Confirmation par e-mail</p>
-            
-            <button onclick="Calendly.initPopupWidget({url: 'https://calendly.com'});return false;" class="w-full inline-flex items-center justify-center gap-2 bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold text-sm px-6 py-3 rounded-lg shadow-lg shadow-sky-500/20 transition">
-              <i class="fa-solid fa-calendar-plus"></i>
-              Choisir un créneau disponible
-            </button>
+
+            <p class="text-[11px] text-slate-500">
+              Besoin d'un dépannage immédiat ? Appelez directement au <a href="tel:0677772213" class="text-sky-700 font-bold hover:underline">06 77 77 22 13</a>
+            </p>
           </div>
+
         </div>
 
       </div>
+
     </section>
 
-    <!-- 3. Bornes de Recharge VE -->
+    <!-- PÔLE 3 : BORNES DE RECHARGE VÉHICULES ÉLECTRIQUES -->
     <section id="bornes" class="scroll-mt-24">
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 pb-6 border-b border-slate-800 gap-4">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 pb-6 border-b border-slate-200 gap-4">
         <div>
-          <div class="inline-flex items-center gap-2 text-emerald-400 text-xs font-bold uppercase tracking-wider mb-2">
-            <i class="fa-solid fa-charging-station"></i>
-            Mobilité Propre & Sécurisée
-          </div>
-          <h2 class="text-2xl sm:text-4xl font-black text-white">Bornes de Recharge & Prises VE</h2>
+          <span class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-emerald-600 mb-2">
+            <i class="fa-solid fa-charging-station"></i> Mobilité Électrique & IRVE
+          </span>
+          <h2 class="font-sans font-extrabold text-2xl sm:text-4xl text-kpe-navy">
+            Bornes de Recharge & Prises Véhicules Électriques
+          </h2>
         </div>
-        <p class="text-slate-400 text-sm max-w-md">
-          Solutions dédiées pour véhicules 100% électriques et hybrides rechargeables dans le respect absolu de l'installation électrique.
+        <p class="text-slate-600 text-sm max-w-md">
+          Faites le plein à domicile en toute tranquillité grâce à une installation sécurisée, calibrée pour votre compteur.
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         
         <!-- Prise renforcée -->
-        <div class="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-6 sm:p-8 hover:border-emerald-500/40 transition duration-300 flex flex-col justify-between">
+        <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between hover:border-emerald-500 transition">
           <div>
             <div class="flex items-center justify-between mb-4">
-              <span class="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded bg-slate-800 text-slate-300">Hybride & Citadine</span>
-              <span class="text-xs font-bold text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">3,2 kW</span>
+              <span class="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded bg-slate-100 text-slate-700">Hybride & Citadine</span>
+              <span class="text-xs font-bold text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full">3,2 kW (14A / 16A)</span>
             </div>
-            <h3 class="text-xl font-bold text-white mb-2">Prise Renforcée (Type Green'up)</h3>
-            <p class="text-slate-400 text-xs leading-relaxed mb-6">
-              La solution économique par excellence pour recharger en toute sécurité la nuit sans risque d'échauffement sur une prise standard. Ligne tirée directement depuis le tableau avec différentiel adapté.
+            <h3 class="font-sans font-bold text-xl text-kpe-navy mb-2">Prise Renforcée (Type Green'up)</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+              Rechargez la nuit en toute sécurité sans solliciter de façon dangereuse une prise électrique classique. Idéal pour les véhicules hybrides rechargeables et les petits trajets journaliers.
             </p>
           </div>
-          <ul class="text-xs text-slate-300 space-y-2 border-t border-slate-800 pt-4">
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Protection différentielle dédiée (type F)</li>
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Détection automatique de recharge sécurisée</li>
+          <ul class="text-xs text-slate-600 space-y-2.5 border-t border-slate-100 pt-4">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> Ligne directe depuis le tableau principal avec disjoncteur dédié</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> Protection différentielle type F adaptée aux courants continus</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> Reconnaissance magnétique du câble de charge</li>
           </ul>
         </div>
 
-        <!-- Borne intelligente -->
-        <div class="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-6 sm:p-8 hover:border-emerald-500/40 transition duration-300 flex flex-col justify-between">
+        <!-- Borne murale Wallbox -->
+        <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between hover:border-emerald-500 transition">
           <div>
             <div class="flex items-center justify-between mb-4">
-              <span class="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded bg-emerald-500/20 text-emerald-300">100% Électrique</span>
-              <span class="text-xs font-bold text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">7,4 kW à 22 kW</span>
+              <span class="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded bg-emerald-50 text-emerald-800">100% Électrique</span>
+              <span class="text-xs font-bold text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full">7,4 kW à 22 kW</span>
             </div>
-            <h3 class="text-xl font-bold text-white mb-2">Borne Murale Intelligente (Wallbox)</h3>
-            <p class="text-slate-400 text-xs leading-relaxed mb-6">
-              Recharge jusqu'à 3 à 5 fois plus rapide qu'une prise classique. Intègre un module de délestage dynamique : la borne adapte automatiquement sa puissance pour éviter tout déclenchement du compteur général.
+            <h3 class="font-sans font-bold text-xl text-kpe-navy mb-2">Borne Murale Intelligente (Wallbox)</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+              Recharge ultra-rapide et sécurisée. La borne communique avec votre compteur électrique et intègre un module de délestage automatique pour ajuster le débit en temps réel sans jamais faire disjoncter la maison.
             </p>
           </div>
-          <ul class="text-xs text-slate-300 space-y-2 border-t border-slate-800 pt-4">
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Programmation sur heures creuses EDF</li>
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Gestion et suivi de charge sur smartphone</li>
+          <ul class="text-xs text-slate-600 space-y-2.5 border-t border-slate-100 pt-4">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> Délestage dynamique (priorité à la maison)</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> Programmation automatique sur vos Heures Creuses</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> Suivi des consommations et contrôle par smartphone</li>
           </ul>
         </div>
 
       </div>
+
     </section>
 
-    <!-- Formulaire de Devis -->
-    <section id="contact" class="scroll-mt-24 relative">
-      <div class="max-w-3xl mx-auto bg-gradient-to-b from-slate-900 via-slate-900/95 to-brand-darkBg border border-slate-700/80 rounded-3xl p-6 sm:p-12 shadow-2xl">
+    <!-- 5. Bloc de Réassurance & Engagements -->
+    <section id="engagements" class="bg-kpe-grayBg border border-slate-200 rounded-3xl p-8 sm:p-12">
+      <div class="max-w-4xl mx-auto text-center mb-10">
+        <span class="text-xs font-bold uppercase tracking-widest text-kpe-gold mb-2 block">Sérénité & Sécurité</span>
+        <h2 class="font-sans font-black text-2xl sm:text-3xl text-kpe-navy">Pourquoi choisir Killian Portal Électricité ?</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm text-center">
+          <div class="w-12 h-12 bg-kpe-gold/10 text-kpe-gold rounded-full flex items-center justify-center mx-auto mb-4 text-xl">
+            <i class="fa-solid fa-user-shield"></i>
+          </div>
+          <h3 class="font-sans font-bold text-base text-kpe-navy mb-2">Interlocuteur Unique</h3>
+          <p class="text-slate-600 text-xs leading-relaxed">
+            De la visite technique initiale jusqu'à la mise sous tension finale, vous échangez avec un artisan qualifié, sans sous-traitance ni intermédiaire.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm text-center">
+          <div class="w-12 h-12 bg-kpe-gold/10 text-kpe-gold rounded-full flex items-center justify-center mx-auto mb-4 text-xl">
+            <i class="fa-solid fa-file-invoice-dollar"></i>
+          </div>
+          <h3 class="font-sans font-bold text-base text-kpe-navy mb-2">Devis Détaillé & Transparent</h3>
+          <p class="text-slate-600 text-xs leading-relaxed">
+            Chaque matériel, ligne et prestation est chiffré poste par poste. Aucune mauvaise surprise en cours de chantier : le prix convenu est respecté.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm text-center">
+          <div class="w-12 h-12 bg-kpe-gold/10 text-kpe-gold rounded-full flex items-center justify-center mx-auto mb-4 text-xl">
+            <i class="fa-solid fa-broom"></i>
+          </div>
+          <h3 class="font-sans font-bold text-base text-kpe-navy mb-2">Chantier Propre & Soigné</h3>
+          <p class="text-slate-600 text-xs leading-relaxed">
+            Respect de votre intérieur, protection des sols lors des interventions et nettoyage systématique à la fin de chaque journée de travail.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Formulaire de Devis -->
+    <section id="contact" class="scroll-mt-24">
+      <div class="max-w-4xl mx-auto bg-white border-2 border-kpe-gold/30 rounded-3xl p-6 sm:p-12 shadow-xl">
         
         <div class="text-center mb-8">
-          <span class="inline-block text-xs font-bold uppercase tracking-widest text-amber-400 bg-amber-500/10 border border-amber-500/20 px-3 py-1 rounded-full mb-3">
-            Étude personnalisée
+          <span class="inline-block text-xs font-bold uppercase tracking-widest text-kpe-gold bg-kpe-gold/10 px-3 py-1 rounded-full mb-3">
+            Étude sans engagement
           </span>
-          <h2 class="text-2xl sm:text-3xl font-black text-white">Demande de Devis Gratuit</h2>
-          <p class="text-slate-400 text-xs sm:text-sm mt-2">
-            Remplissez ce formulaire et recevez un retour sous 24h à 48h ouvrées.
+          <h2 class="font-sans font-black text-2xl sm:text-4xl text-kpe-navy">
+            Demander un Devis Gratuit
+          </h2>
+          <p class="text-slate-600 text-xs sm:text-sm mt-2 max-w-xl mx-auto">
+            Remplissez ce formulaire pour votre projet. Vous recevrez une réponse personnalisée sous 24 à 48 heures.
           </p>
         </div>
 
         <form action="https://formspree.io/f/ton-identifiant" method="POST" class="space-y-5">
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <label class="block text-xs font-semibold text-slate-300 mb-1.5">Nom & Prénom *</label>
-              <input type="text" name="nom" required placeholder="Ex : Jean Dupont" class="w-full px-4 py-3 bg-slate-800/80 text-white border border-slate-700 rounded-xl text-sm focus:outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-400 transition">
+              <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Nom & Prénom *</label>
+              <input type="text" name="nom" required placeholder="Ex : Thomas Martin" class="w-full px-4 py-3 bg-slate-50 text-slate-800 border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-kpe-navy focus:bg-white transition">
             </div>
             <div>
-              <label class="block text-xs font-semibold text-slate-300 mb-1.5">Numéro de téléphone *</label>
-              <input type="tel" name="telephone" required placeholder="06 00 00 00 00" class="w-full px-4 py-3 bg-slate-800/80 text-white border border-slate-700 rounded-xl text-sm focus:outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-400 transition">
+              <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Téléphone *</label>
+              <input type="tel" name="telephone" required placeholder="06 00 00 00 00" class="w-full px-4 py-3 bg-slate-50 text-slate-800 border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-kpe-navy focus:bg-white transition">
             </div>
           </div>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <label class="block text-xs font-semibold text-slate-300 mb-1.5">Adresse e-mail *</label>
-              <input type="email" name="email" required placeholder="contact@exemple.fr" class="w-full px-4 py-3 bg-slate-800/80 text-white border border-slate-700 rounded-xl text-sm focus:outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-400 transition">
+              <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Adresse e-mail *</label>
+              <input type="email" name="email" required placeholder="contact@exemple.fr" class="w-full px-4 py-3 bg-slate-50 text-slate-800 border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-kpe-navy focus:bg-white transition">
             </div>
             <div>
-              <label class="block text-xs font-semibold text-slate-300 mb-1.5">Prestation concernée</label>
-              <select name="prestation" class="w-full px-4 py-3 bg-slate-800/80 text-white border border-slate-700 rounded-xl text-sm focus:outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-400 transition">
-                <option value="electricite">Électricité Générale / Rénovation</option>
-                <option value="tableau">Tableau électrique / Mise aux normes</option>
-                <option value="clim-installation">Climatisation (Installation neuve)</option>
-                <option value="clim-entretien">Climatisation (Entretien / Révision)</option>
-                <option value="borne-ve">Borne de recharge pour véhicule électrique</option>
+              <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Commune du chantier *</label>
+              <input type="text" name="ville" required placeholder="Ex : Albi, Saint-Juéry, Arthès..." class="w-full px-4 py-3 bg-slate-50 text-slate-800 border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-kpe-navy focus:bg-white transition">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Prestation principale</label>
+              <select name="prestation" class="w-full px-4 py-3 bg-slate-50 text-slate-800 border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-kpe-navy focus:bg-white transition">
+                <option value="electricite-renovation">Électricité Générale / Rénovation</option>
+                <option value="tableau-normes">Tableau Électrique / Mise en sécurité</option>
+                <option value="clim-installation">Climatisation (Pose d'un système neuf)</option>
+                <option value="clim-entretien">Climatisation (Entretien / Dépannage)</option>
+                <option value="borne-ve">Borne de recharge ou Prise VE</option>
                 <option value="depannage">Dépannage d'urgence</option>
-                <option value="autre">Autre demande</option>
+                <option value="autre">Autre projet</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Type de bien</label>
+              <select name="type_bien" class="w-full px-4 py-3 bg-slate-50 text-slate-800 border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-kpe-navy focus:bg-white transition">
+                <option value="maison">Maison individuelle</option>
+                <option value="appartement">Appartement</option>
+                <option value="local-pro">Local commercial ou professionnel</option>
+                <option value="autre">Autre</option>
               </select>
             </div>
           </div>
 
           <div>
-            <label class="block text-xs font-semibold text-slate-300 mb-1.5">Description de votre projet *</label>
-            <textarea name="message" rows="4" required placeholder="Précisez votre commune, le type de bien (maison, appartement, local pro) et les travaux envisagés..." class="w-full px-4 py-3 bg-slate-800/80 text-white border border-slate-700 rounded-xl text-sm focus:outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-400 transition"></textarea>
+            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Description de votre projet *</label>
+            <textarea name="message" rows="4" required placeholder="Décrivez votre besoin : surface approximative, nombre de pièces, urgence des travaux..." class="w-full px-4 py-3 bg-slate-50 text-slate-800 border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-kpe-navy focus:bg-white transition"></textarea>
           </div>
 
-          <button type="submit" class="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-black text-sm uppercase tracking-wider py-4 rounded-xl transition shadow-xl shadow-amber-500/20 transform hover:-translate-y-0.5 active:translate-y-0">
-            Transmettre ma demande de devis
+          <button type="submit" class="w-full bg-gradient-to-r from-kpe-navy to-kpe-navyLight hover:from-kpe-gold hover:to-kpe-goldLight text-white font-sans font-bold text-sm uppercase tracking-wider py-4 rounded-xl shadow-lg transition transform hover:-translate-y-0.5">
+            Envoyer ma demande de devis gratuit
           </button>
+          
+          <p class="text-[11px] text-center text-slate-400">
+            Vos données personnelles sont strictement confidentielles et utilisées uniquement pour traiter votre demande de devis.
+          </p>
         </form>
 
       </div>
@@ -439,25 +554,46 @@
 
   </main>
 
-  <!-- Pied de page -->
-  <footer class="bg-black/40 border-t border-slate-800/80 py-12 text-slate-400 text-xs">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+  <!-- 7. Pied de page -->
+  <footer class="bg-kpe-navy text-slate-300 py-12 border-t border-slate-800 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8 items-center text-center md:text-left">
       
-      <div class="flex items-center gap-3.5">
-        <img src="logo_kpe_complet_transparent.png" alt="KPE Logo" class="h-10 w-10 object-contain rounded-full">
+      <!-- Logo IMG_4355.PNG en footer -->
+      <div class="flex items-center justify-center md:justify-start gap-4">
+        <img src="IMG_4355.PNG" alt="KPE Logo Officiel" class="h-14 w-14 object-contain rounded-full bg-white p-0.5">
         <div>
-          <p class="text-white font-bold text-sm tracking-wide">Killian Portal Électricité (KPE)</p>
-          <p class="text-slate-500 mt-0.5">Artisan Électricien &bull; Entreprise Individuelle &bull; Garantie Décennale</p>
+          <p class="font-sans font-extrabold text-white text-base">Killian Portal Électricité (KPE)</p>
+          <p class="text-slate-400 text-xs mt-0.5">Entreprise Individuelle &bull; Artisan Électricien</p>
+          <p class="text-kpe-gold text-xs font-medium">Assurance Décennale & Responsabilité Civile</p>
         </div>
       </div>
 
-      <div class="text-center md:text-right text-slate-400">
-        <p class="text-white font-semibold">Contact direct : <a href="tel:0677772213" class="text-amber-400 hover:underline">06 77 77 22 13</a></p>
-        <p class="text-slate-500 mt-1">&copy; 2026 KPE - Killian Portal Électricité. Tous droits réservés.</p>
+      <!-- Zone d'intervention -->
+      <div class="text-slate-400">
+        <p class="text-white font-bold mb-1">Zone d'intervention :</p>
+        <p>Albi, Saint-Juéry, Arthès, Lescure-d'Albigeois, Terssac, Cagnac-les-Mines et jusqu'à 25 km aux alentours.</p>
+      </div>
+
+      <!-- Coordonnées -->
+      <div class="md:text-right text-slate-400">
+        <p class="text-white font-semibold mb-1">
+          Ligne directe : <a href="tel:0677772213" class="text-kpe-gold font-bold hover:underline">06 77 77 22 13</a>
+        </p>
+        <p>&copy; 2026 KPE - Killian Portal Électricité.</p>
+        <p class="text-slate-500 mt-1">Tous droits réservés &bull; Site sécurisé HTTPS</p>
       </div>
 
     </div>
   </footer>
+
+  <!-- Script Menu Mobile -->
+  <script>
+    const btn = document.getElementById('mobileMenuBtn');
+    const menu = document.getElementById('mobileMenu');
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
 
 </body>
 </html>
