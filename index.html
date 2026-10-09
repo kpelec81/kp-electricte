@@ -50,6 +50,9 @@
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Script Officiel Elfsight Reviews en direct -->
+  <script src="https://elfsightcdn.com/platform.js" async></script>
 </head>
 
 <body class="bg-white text-slate-800 font-body antialiased selection:bg-kpe-gold selection:text-white pb-16 sm:pb-0 overflow-x-hidden">
@@ -73,7 +76,7 @@
         </a>
         <span class="text-slate-500">|</span>
         <a href="#avis" class="text-amber-300 hover:text-white flex items-center gap-1 transition">
-          <i class="fa-brands fa-google text-amber-400"></i> Avis Google 4,8/5 ★★★★★
+          <i class="fa-brands fa-google text-amber-400"></i> Avis Google en direct
         </a>
       </div>
     </div>
@@ -150,7 +153,7 @@
             </span>
             <a href="#avis" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-100 hover:bg-slate-200 border border-slate-200 text-slate-800 text-xs font-bold transition">
               <i class="fa-brands fa-google text-amber-500"></i>
-              <span>4,7 / 5 sur Google</span>
+              <span>Avis Google vérifiés</span>
               <span class="text-amber-500">★★★★★</span>
             </a>
           </div>
@@ -402,7 +405,7 @@
       </div>
     </section>
 
-    <!-- 5. SECTION AVIS GOOGLE -->
+    <!-- 5. SECTION AVIS GOOGLE (AVEC WIDGET EN DIRECT) -->
     <section id="avis" class="scroll-mt-24 bg-gradient-to-br from-slate-50 via-white to-amber-50/20 border-2 border-slate-200 rounded-3xl p-6 sm:p-12 shadow-sm" data-aos="zoom-in" data-aos-duration="800">
       <div class="max-w-4xl mx-auto text-center mb-8">
         <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-slate-200 shadow-sm text-xs font-bold text-slate-700 mb-4">
@@ -413,20 +416,21 @@
         <h2 class="font-sans font-black text-2xl sm:text-3xl text-kpe-navy mb-2">
           La satisfaction de nos clients
         </h2>
-
-        <div class="flex items-center justify-center gap-3 my-3">
-          <span class="font-sans font-black text-3xl sm:text-4xl text-kpe-navy">4,7</span>
-          <div class="flex items-center text-amber-400 text-xl sm:text-2xl gap-1">
-            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
-          </div>
-          <span class="text-xs sm:text-sm font-semibold text-slate-500">(Avis vérifiés Google)</span>
-        </div>
+        <p class="text-slate-600 text-xs sm:text-sm max-w-lg mx-auto mb-6">
+          Retrouvez les évaluations et commentaires certifiés synchronisés en direct depuis notre fiche d'établissement Google Maps.
+        </p>
       </div>
 
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+      <!-- WIDGET OFFICIEL ELFSIGHT SYNCHRONISÉ EN TEMPS RÉEL -->
+      <div class="my-6">
+        <div class="elfsight-app-c8474ba6-b9ad-4801-8b08-4aa4c15ebb71" data-elfsight-app-lazy></div>
+      </div>
+
+      <!-- Boutons d'action Google Maps -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8 pt-6 border-t border-slate-200/60">
         <a href="https://g.page/r/CRSBDJEn_ZzpEBM" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-white border border-slate-300 text-slate-700 hover:bg-slate-50 font-sans font-bold text-xs sm:text-sm px-6 py-3 rounded-xl shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5">
           <i class="fa-brands fa-google text-amber-500"></i>
-          <span>Voir les avis sur Google Maps</span>
+          <span>Voir tous les avis sur Google Maps</span>
         </a>
         <a href="https://g.page/r/CRSBDJEn_ZzpEBM/review" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-sans font-bold text-xs sm:text-sm px-6 py-3 rounded-xl shadow hover:shadow-lg transition-all duration-200 transform hover:-translate-y-0.5">
           <i class="fa-regular fa-star"></i>
